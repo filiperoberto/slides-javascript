@@ -76,6 +76,9 @@ body {
     display: block;
     text-align: center;
     width: 100%;
+    background: white;
+
+    box-shadow: 0 0 2px #555;
 }
 
 .nav > a {
@@ -87,6 +90,7 @@ body {
     height: 25px;
     text-decoration: none;
 
+    margin: 0 2px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -113,4 +117,9 @@ pre {
     border-left: 6px solid #005282;
     border-radius: 5px;
     padding: 5px 20px;
+    overflow: auto;
+}
+
+pre.slide-full {
+    height: calc(100% - 200px);
 }
