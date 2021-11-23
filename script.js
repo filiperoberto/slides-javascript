@@ -17,9 +17,9 @@ function daDestaqueAoBotaoNavegacao(hash) {
 
   [...anchors].forEach((element) => {
     if (element.hash === hash) {
-      element.classList.add("active");
+      element.classList.add("active")
     } else {
-      element.classList.remove("active");
+      element.classList.remove("active")
     }
   });
 }
@@ -87,8 +87,10 @@ var timeout;
 
 window.addEventListener("scroll", function () {
 
-  clearTimeout(timeout);
-  timeout = setTimeout(processaScroll,100)
+  processaScroll();
+
+  //clearTimeout(timeout);
+  //timeout = setTimeout(processaScroll,100)
   
 });
 
