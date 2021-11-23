@@ -12,22 +12,81 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Apresentação Javascript</title>
+    <script src="./script.js" defer></script>
   </head>
   <body class="font-sans">
       <nav class="nav">
+        <a href="#prev"><</a>
           <a href="#slide-1">1</a>
           <a href="#slide-2">2</a>
+          <a href="#slide-3">3</a>
+          <a href="#slide-4">4</a>
+          <a href="#slide-5">5</a>
+          <a href="#slide-6">6</a>
+          <a href="#slide-7">7</a>
+          <a href="#slide-8">8</a>
+          <a href="#slide-9">9</a>
+          <a href="#slide-10">10</a>
+          <a href="#next">></a>
       </nav>
     <div class="container">
-      <section id="slide-1" class="slide" >
+      <section id="slide-1" class="slide main" >
         <div class="text-center">
-            <h1>Javascript</h1>
-            <img src="./images/logo.png" alt="">
+            <h1 class="title">Javascript</h1>
+            <img class="picture" src="./images/logo.png" alt="logotipo javascript">
+            <p>Por: Filipe Roberto Silva</p>
         </div>
       </section>
 
       <section id="slide-2" class="slide">
-        <h2>Funções</h2>
+        <h2 class="title">Introdução</h2>
+        <ul>
+          <li>Linguagem Versátil</li>
+        </ul>
+        <div class="text-center inline-images">
+          <img src="./images/chrome.png"  class='picture small' alt="logotipo chrome">
+          <img src="./images/about-nodejs.png"  class='picture small' alt="logotipo nodejs">
+          <img src="./images/mongo.png"  class='picture small' alt="logotipo mongodb">
+          <img src="./images/electron_logo.png"  class='picture small' alt="logotipo electron">
+        </div>
+      </section>
+
+      <section id="slide-3" class="slide">
+        <h2 class="title">Introdução</h2>
+        <ul>
+          <li>Multiparadigma</li>
+        </ul>
+        <pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">function</span> square<span style="color: #009900;">&#40;</span>x<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #000066; font-weight: bold;">return</span> x <span style="color: #339933;">*</span> x<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">square<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// 4</span></div></li></ol></pre>
+        <pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">function</span> Person<span style="color: #009900;">&#40;</span>name<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">name</span> <span style="color: #339933;">=</span> name<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">greeting</span> <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    alert<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Hi! I<span style="color: #000099; font-weight: bold;">\'</span>m '</span> <span style="color: #339933;">+</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">name</span> <span style="color: #339933;">+</span> <span style="color: #3366CC;">'.'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">var</span> person1 <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">new</span> Person<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Bob'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">var</span> person2 <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">new</span> Person<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Sarah'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li></ol></pre>
+      </section>
+
+      <section id="slide-4" class="slide">
+        <h2 class="title">Funções</h2>
+        <pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">function</span> square<span style="color: #009900;">&#40;</span>x<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #000066; font-weight: bold;">return</span> x <span style="color: #339933;">*</span> x<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">square<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// 4</span></div></li></ol></pre>
+      </section>
+
+      <section id="slide-5" class="slide">
+        <h2 class="title">Manipulação de DOM</h2>
+      </section>
+
+      <section id="slide-6" class="slide">
+        <h2 class="title">Seletores</h2>
+      </section>
+
+      <section id="slide-7" class="slide">
+        <h2 class="title">Eventos</h2>
+      </section>
+
+      <section id="slide-8" class="slide">
+        <h2 class="title">JSON</h2>
+      </section>
+
+      <section id="slide-9" class="slide">
+        <h2 class="title">LocalStorage</h2>
+      </section>
+
+      <section id="slide-10" class="slide">
+        <h2 class="title">Interval e Timeout</h2>
       </section>
     </div>
   </body>
