@@ -150,3 +150,31 @@ pre.slide-full {
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
   }
+
+#contador {
+    text-align: center;
+}
+
+#contador::before {
+    content: "Contador: ";
+}
+
+.acoes-contador {
+    text-align: center;
+}
+
+.acao-contador {
+    cursor: pointer;
+}
+
+.acoes-contador > .acao-contador:disabled {
+    display: none;
+}
+
+.acoes-contador > .acao-contador + .acao-contador {
+    display: none;
+}
+
+.acoes-contador > .acao-contador:disabled + .acao-contador {
+    display: inline-block;
+}

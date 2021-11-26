@@ -118,26 +118,12 @@ function navegaParaId(id) {
   window.location.hash =  '#' + id;
 }
 
-/*
-function preencherRoteiro() {
+function incrementarContador() {
 
-  let slides = document.querySelectorAll('.slide'); //NodeList
-  let listaRoteiro = document.querySelector('.roteiro ul');
+  let contador = document.querySelector('#contador');
 
-  listaRoteiro.innerHTML = '';
-
-  [...slides]
-    .filter(element => !element.classList.contains('main') && !element.classList.contains('roteiro')) // filtra primeiro slide e roteiro
-    .map(element => element.querySelector('.title')) //pega o elemento título de cada slide
-    .map(title => title.textContent) // pega conteúdo de texto de cada título
-    .filter((item, pos, a) => a.indexOf(item) === pos) // filtra os repetidos
-    .map(title => {
-      let item = document.createElement('li');
-      item.textContent = title;
-      return item;
-    }) //cria um item de lista com o conteúdo dos títulos
-    .forEach(item => listaRoteiro.appendChild(item)); // inclui no roteiro
-}*/
+  contador.textContent++;
+}
 
 var timeout;
 function debounce(callback) {
@@ -149,8 +135,7 @@ window.addEventListener("scroll", function(){
   debounce(processaScroll);
 });
 
-adicionarNavegacao();
-preencherRoteiro();
+// Botões slide
 
 let botaoSlideAnterior = document.querySelector("#prev-slide");
 let botaoProximoSlide = document.querySelector("#next-slide");
@@ -176,3 +161,24 @@ window.addEventListener("keydown", function (evt) {
       break;
   }
 });
+
+// Contador
+
+let botaoLigarContador = document.querySelector('#ligar-contador');
+let botaoDesligarContador = document.querySelector('#desligar-contador');
+let contadorInterval = null;
+
+botaoLigarContador.addEventListener('click', function() {
+
+  clearInterval(contadorInterval);
+  contadorInterval = setInterval(incrementarContador,1000);
+  botaoLigarContador.disabled = true;
+});
+
+botaoDesligarContador.addEventListener('click', function() {
+  clearInterval(contadorInterval);
+  botaoLigarContador.disabled = false;
+})
+
+adicionarNavegacao();
+preencherRoteiro();
