@@ -4,7 +4,7 @@ Esta apresentação tem por objetivo mostrar um pouco do poder do javascript. Se
 
 Javascript é uma linguagem bastante versátil. Ela iniciou sua jornada nos navegadores, e com a vinda de nodejs, mongodb, electron e tantas outras ferramentes, o javascript ganhou poderes no servidor, no banco de dados, em aplicativos desktop e por aí vai.
 
-Ela também é uma linguagem multi paradigma, o que quer dizer que ele pode ser utilizada como uma linguagem funcional (que é como utilizaremos nos exemplos desta apresentação), ou com orientação a objetos. Além é claro da sua orientação a eventos que é muito usada.
+Ela também é uma linguagem multiparadigma, o que quer dizer que ela pode ser utilizada como uma linguagem funcional (que é como utilizaremos nos exemplos desta apresentação), ou com orientação a objetos. Além é claro da sua orientação a eventos que é muito usada.
 
 Apesar de hoje haver muitas ferramentas que nos facilitam o uso de javscript, é importante aprendermos a utilizar javascript puro para entender melhor como essas ferramentas funcionam e até saber o que estamos fazendo. Na resolução de problemas, compreender melhor se estamos lidando, por exemplo, com um problema na biblioteca, ou no javscript.
 
