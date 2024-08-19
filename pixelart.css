@@ -1,0 +1,19 @@
+#pixel-art {
+    background: #ccc;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.linha-pixelart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pixel {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 2px;
+}

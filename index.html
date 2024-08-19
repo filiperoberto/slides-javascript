@@ -11,8 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pixelart.css" />
     <title>Apresentação Javascript</title>
-    <!--<script src="./script.js" defer></script>-->
+    <script src="./script.js" defer></script>
   </head>
   <body>
 
@@ -97,6 +98,15 @@
       </section>
 
       <section class="slide">
+        <h2 class="title">Eventos</h2>
+        <pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">element.<span style="color: #660066;">addEventListener</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'input'</span><span style="color: #339933;">,</span><span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>event<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  ...</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span></div></li></ol></pre>
+        <div class="acoes-contador">
+          <div id="display-texto"></div>
+          <input type="text" id="input-evento">
+        </div>
+      </section>
+
+      <section class="slide">
         <h2 class="title">Interval e Timeout</h2>
         <pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">let timeout <span style="color: #339933;">=</span> setTimeout<span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Eu esperei 5 segundos para executar.'</span><span style="color: #009900;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span><span style="color: #CC0000;">5000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">let intervalo <span style="color: #339933;">=</span> setInterval<span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Eu sou executado a cada 7 segundos.&quot;</span><span style="color: #009900;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span><span style="color: #CC0000;">7000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li></ol></pre>
 
@@ -109,13 +119,54 @@
       </section>
 
       <section class="slide">
+        <h2 class="title">JSON</h2>
+
+        <div>
+          <pre style="font-family:monospace;color: rgb(68, 68, 68); background-color: rgb(243, 243, 243); font-weight: 400; "><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">{</span>
+   <span style="color: rgb(68, 68, 68); font-weight: 400;">"nome"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">"Filipe"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">,</span>
+   <span style="color: rgb(68, 68, 68); font-weight: 400;">"sobrenome"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">"Silva"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">,</span>
+   <span style="color: rgb(68, 68, 68); font-weight: 400;">"dataNascimento"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">{</span>
+      <span style="color: rgb(68, 68, 68); font-weight: 400;">"ano"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">1989</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">,</span>
+      <span style="color: rgb(68, 68, 68); font-weight: 400;">"mes"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">9</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">,</span>
+      <span style="color: rgb(68, 68, 68); font-weight: 400;">"dia"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">17</span>
+   <span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">}</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">,</span>
+   <span style="color: rgb(68, 68, 68); font-weight: 400;">"telefones"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">[</span>
+      <span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">{</span>
+         <span style="color: rgb(68, 68, 68); font-weight: 400;">"numero"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">984015553</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">,</span>
+         <span style="color: rgb(68, 68, 68); font-weight: 400;">"dd"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">48</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">,</span>
+         <span style="color: rgb(68, 68, 68); font-weight: 400;">"tipo"</span><span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">:</span><span style="color: rgb(136, 0, 0); font-weight: 400;">"celular"</span>
+      <span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">}</span>
+   <span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">]</span>
+<span style="color: rgba(68, 68, 68, 0.667); font-weight: 400;">}</span></pre>
+        </div>
+
+      </section>
+
+      <section class="slide">
+        <h2 class="title">Desafio (Pixelart)</h2>
+
+        <div>
+          <label for="input-color">Escolha a cor</label>
+          <input type="color" id="input-color">
+        </div>
+        <div>
+          <label for="tamanho-pixelart">Tamanho</label>
+          <input type="number" value="16" id="tamanho-pixelart">
+        </div>
+        <div>
+          <button id="button-limpar">Limpar</button> 
+        </div>
+
+        <div id="pixel-art"></div>
+      </section>
+
+      <section class="slide">
         <h2 class="title">Recursos</h2>
         <ul>
           <li>DOM: <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction">MDN Web Docs - Introdução ao DOM</a></li>
           <li>Seletores: <a href="https://www.w3schools.com/cssref/css_selectors.asp">W3schools - CSS Selectors</a></li>
-          <li>Eventos: <a href="HTML Event Attributes">W3schools - HTML Event Attributes</a></li>
+          <li>Eventos: <a href="https://www.w3schools.com/js/js_events.asp">W3schools - HTML Event Attributes</a></li>
           <li>Timouts e intervalos: <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">MDN Web Docs - Timeouts e intervalos</a></li>
-          <li>Caso de estudo: <a href="https://dev.to/0shuvo0/lets-create-a-pixel-art-maker-with-javascript-4016">Gerador de Pixel Art em JavaScript</a></li>
         </ul>
         <div class="text-center inline-images">
           <img src="./images/qrcore-apresentacao.png"  class='picture small' alt="qrcode apresentação">
@@ -126,6 +177,7 @@
           </small>
         </div>
       </section>
+
 
     </div>
   </body>

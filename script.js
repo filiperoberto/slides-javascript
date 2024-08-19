@@ -12,7 +12,7 @@ function estaVisivelNaTela(el) {
 function pegaSlideAtual() {
   let slides = document.querySelectorAll(".slide");
 
-  for (let i = 0; i < slides.length; i++) {
+  for (let i = 0 ; i < slides.length ; i++ ) {
     let slide = slides[i];
     let titulo = slide.querySelector(".title");
 
@@ -145,19 +145,22 @@ botaoSlideAnterior.addEventListener("click", slideAnterior);
 
 window.addEventListener("keydown", function (evt) {
 
-  evt.preventDefault();
   switch (evt.key) {
     case "ArrowLeft":
       slideAnterior();
+      evt.preventDefault();
       break;
     case "ArrowRight":
       proximoSlide();
+      evt.preventDefault();
       break;
     case "ArrowUp":
       slideAnterior();
+      evt.preventDefault();
       break;
     case "ArrowDown":
       proximoSlide();
+      evt.preventDefault();
       break;
   }
 });
@@ -182,3 +185,62 @@ botaoDesligarContador.addEventListener('click', function() {
 
 adicionarNavegacao();
 preencherRoteiro();
+
+
+let botaoClicaAqui = document.getElementById('botao-clicavel')
+
+botaoClicaAqui.addEventListener('click', function () {
+  console.log('Oi, eu fui clicado');
+})
+
+
+var inputLegal = document.getElementById('input-evento')
+var displayTexto = document.getElementById('display-texto')
+
+inputLegal.addEventListener('input', function () {
+  displayTexto.innerHTML = inputLegal.value
+})
+
+var tamanhoPixelArt = document.getElementById('tamanho-pixelart')
+var botaoLimpar = document.getElementById('button-limpar')
+var botaoCor = document.getElementById('input-color')
+var pixelArtArea = document.getElementById('pixel-art')
+
+function construirPixelart() {
+
+  pixelArtArea.innerHTML = ''
+
+  for (let j = 0; j < tamanhoPixelArt.value; j++) {
+  
+    let linha = document.createElement('div')
+    linha.classList = 'linha-pixelart'
+  
+    pixelArtArea.appendChild(linha)
+  
+    for (let i = 0; i < tamanhoPixelArt.value; i++) {
+      
+      let pixel = document.createElement('span')
+      pixel.classList = 'pixel'
+      pixel.style.backgroundColor = botaoCor.value
+    
+      pixel.addEventListener('click', function () {
+        pixel.style.backgroundColor = botaoCor.value
+      })
+      linha.appendChild(pixel)
+    }  
+  }
+}
+
+tamanhoPixelArt.addEventListener('input', function () {
+  construirPixelart()
+})
+
+botaoLimpar.addEventListener('click', function () {
+  botaoCor.value = '#000'
+  construirPixelart()
+})
+
+construirPixelart()
+
+
+
